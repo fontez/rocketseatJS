@@ -1,5 +1,5 @@
 # rocketseatJS
-Material de estudo do curso starter da Rocketseat.
+<b>Material de estudo do curso starter da Rocketseat.</b>
 
 1. Curso Javascript *
 1. Introdução 
