@@ -1,0 +1,63 @@
+<html>
+<head>
+
+    <title>Curso Java Script</title>
+</head>
+
+<body>
+    <script>
+    //console.log('ola mundo');
+    var nome = "Diego";
+    //atipagem
+    var idade = 23;
+    var peso = 80.5;
+    var humano = true;
+    
+    var alunos = ['Diego', 'Gabriel', 'Lucas'];
+    
+    var aluno = {
+
+        nome: alunos[2],
+        idade: 38,
+        peso: 80.5,
+        humano: true
+    };
+    console.log(aluno.nome);
+    console.log(alunos[1]);
+
+    var x = 10, y = 11;
+    console.log(x, y);
+
+
+    function soma (num1, num2) {
+
+        var resultado = num1+num2;
+        return resultado;
+
+    }
+    //var result = soma(1,3);
+    //console.log(soma(1,3));
+
+
+    var endereco = {
+        rua: "Rua dos Pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP" 
+    }
+
+    function retonaResultado () {
+        var texto = 'O usuário mora em ' + endereco.cidade + '/' + endereco.uf + ', no bairro' + endereco.bairro + 
+        ', na rua "' + endereco.rua + '" com nº ' + endereco.numero;
+        return texto;
+    }
+
+    var verResultado = retonaResultado();
+    console.log(verResultado);
+    
+    </script>
+</body>
+
+
+</html>
