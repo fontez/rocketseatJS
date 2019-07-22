@@ -6,23 +6,26 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
+    <button id="clicar">Clicar</button>
+    <div id="quadrados"></div>
     <script>
-      
-      var usuarios = [
-        {
-            nome: "Diego",
-            habilidades: ["Javascript", "ReactJS", "Reduz"]
-        },
-        {
-            nome: "Gabriel",
-            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
-        }];
+     
+     var botaoElemento = document.querySelector('#clicar');
+     botaoElemento.style.backgroundColor = '#fff'; 
+     //var quadradosElemento = document.querySelector("quadrados");
+     //var botaoElemento = document.getElementById('clicar');
+     var quadradosElemento = document.getElementById('clicar');
+        
+     botaoElemento.onclick = function () {
+         var quadrado = document.createElement('div');
 
-        for (const value of usuarios) //saca info do vector usuarios e colocar no value
-        //const é se não mudarmos a variavel dentro do bloco
-        {
-            console.log("O "+value.nome+" possui as habilidades: "+value.habilidades.join(', '));    
-        }
+         quadrado.style.width = '100px';
+         quadrado.style.height = '100px';
+         quadrado.style.backgroundColor = '#babababa';
+
+         quadradosElemento.appendChild(quadrado);
+     };
+     
 
         </script>
 </body>
