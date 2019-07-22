@@ -6,12 +6,16 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-    <button id="clicar">Clicar</button>
+    <button id="clicar"><p id="textoBotao">Clicar</p></button>
     <div id="quadrados"></div>
     <script>
      
      var botaoElemento = document.querySelector('#clicar');
+     var textoElemento = document.querySelector('#textoBotao');
+     
      botaoElemento.style.backgroundColor = '#fff'; 
+     textoElemento.textContent.fontcolor("#4d4d");
+
      //var quadradosElemento = document.querySelector("quadrados");
      //var botaoElemento = document.getElementById('clicar');
      var quadradosElemento = document.getElementById('clicar');
