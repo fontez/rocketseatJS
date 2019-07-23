@@ -18,9 +18,9 @@
     var listaNomes = document.querySelector("#listaNomes");
     var inputElement = document.querySelector("input[name=nome]");
 
-    function inserirElementosLista (text){
+    function inserirElementosLista (texto){
         var liElement = document.createElement("li");
-        var textElement = document.createTextNode(text);
+        var textElement = document.createTextNode(texto);
 
         liElement.appendChild(textElement);
         listaNomes.appendChild(liElement);
