@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Desafio 1 exercicio 3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <ul id="listaNomes"></ul>
+    <input type="text" name="nome"></input>
+    <button onclick="adicionar()">Adicionar</button>
+
+    
+    <script>
+     
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+    var listaNomes = document.querySelector("#listaNomes");
+    var inputElement = document.querySelector("input[name=nome]");
+
+    function inserirElementosLista (text){
+        var liElement = document.createElement("li");
+        var textElement = document.createTextNode(text);
+
+        liElement.appendChild(textElement);
+        listaNomes.appendChild(liElement);
+    
+    }
+    
+    function adicionar (){
+
+        inserirElementosLista(inputElement.value);
+        inputElement.value = "";
+    }
+
+    for (value of nomes){
+        inserirElementosLista(value);
+    }
+
+
+
+        </script>
+</body>
+</html>
