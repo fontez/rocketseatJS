@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Desafio 1 exercicio 3</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <button id="clicar">Clicar</button>
+    <div id="quadrados"></div>
+    <script>
+     
+     var botaoElemento = document.querySelector('#clicar');
+     botaoElemento.style.backgroundColor = '#fff'; 
+     botaoElemento.style.color = '#F54'; //coloquei 
+
+     var quadradosElemento = document.getElementById('clicar');
+        
+     botaoElemento.onclick = function () {
+         var quadrado = document.createElement('div');
+
+         quadrado.style.width = '100px';
+         quadrado.style.height = '100px';
+         quadrado.style.backgroundColor = '#babababa';
+
+         quadradosElemento.appendChild(quadrado);
+     };
+
+     quadradosElemento.onmouseover = function() {
+         var corFundo = getRandomColor();
+         quadradosElemento.style.backgroundColor =  corFundo;
+     }
+     function getRandomColor() {
+         var letters = "0123456789ABCDEF";
+         var color = "#";
+         for (var i = 0; i < 6; i++) {
+             color += letters[Math.floor(Math.random() * 16)];
+         }
+         return color;
+     }
+     var newColor =  getRandomColor(); //#E943F0
+     
+
+        </script>
+</body>
+</html>
