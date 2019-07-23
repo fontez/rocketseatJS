@@ -19,7 +19,19 @@ function renderTodos () {
         var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
 
+        var linkElement = document.createElement("a");
+        linkElement.setAttribute("href", "#");
+
+        var pos = todos.indexOf(todo); //diz a posicao do todo
+        linkElement.setAttribute("onclick", "deleteTodo(" + pos + ")");
+
+        var linkText = document.createTextNode("Excluir");
+
+        linkElement.appendChild(linkText);
+        
         todoElement.appendChild(todoText);
+        todoElement.appendChild(linkElement);
+
         listElement.appendChild(todoElement);
         //console.log(todo);
     }
@@ -35,3 +47,9 @@ function addTodo(){
     renderTodos();
 }
 buttonElement.onclick=addTodo;
+
+function deleteTodo(pos) { //remove pela posicao do array
+    todos.splice(pos, 1); //remove 1 item da pos (posicao no array)
+    renderTodos(); //para inserir novos itens
+
+}
